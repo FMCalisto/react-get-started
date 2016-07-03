@@ -14,7 +14,7 @@ React is a JavaScript library for building user interfaces.
 
 This repository is just a [Getting Started](https://facebook.github.io/react/docs/getting-started.html) to learn React.
 
-This is a **COPY** from the main [React v15.2.0](https://facebook.github.io/react/downloads.html) Source with some files made by [me](https://github.com/FMCalisto) on the [src](https://github.com/FMCalisto/react-get-started/src).
+This is a **COPY** from the main [React v15.2.0](https://facebook.github.io/react/downloads.html) Source with some files made by [me](https://github.com/FMCalisto) on the [src](https://github.com/FMCalisto/react-get-started/tree/master/src/).
 
 ## Examples
 
