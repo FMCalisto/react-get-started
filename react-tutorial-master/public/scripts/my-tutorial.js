@@ -51,6 +51,23 @@ var CommentBox = React.createClass({
     },
 
     handleCommentSubmit: function(comment) {
+        $.ajax({
+            url: this.props.url,
+            dataType: 'json',
+            type: 'POST',
+            data: comment,
+            success: function(data) {
+                this.setState({
+                    data: data
+                });
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
+    },
+
+    handleCommentSubmit: function(comment) {
         // TODO: submit to the server and refresh the list
     },
 
@@ -119,7 +136,7 @@ var CommentForm = React.createClass({
         if(!text || !author) {
             return;
         }
-        // TODO: send request to the server
+        this.props.onCommentSubmit({author: author, text: text});
         this.setState({author: '', text: ''});
     },
 
