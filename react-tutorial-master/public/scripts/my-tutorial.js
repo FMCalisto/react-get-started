@@ -108,9 +108,20 @@ var CommentForm = React.createClass({
         });
     },
 
+    handleSubmit: function(e) {
+        e.preventDefault();
+        var author = this.state.author.trim();
+        var text = this.state.text.trim();
+        if(!text || !author) {
+            return;
+        }
+        // TODO: send request to the server
+        this.setState({author: '', text: ''});
+    },
+
     render: function() {
         return (
-            <form className="commentForm">
+            <form className="commentForm" onSubmit={this.handleSubmit}>
                 <input
                     typy="text"
                     placeholder="Your name"
