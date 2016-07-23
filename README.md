@@ -16,6 +16,32 @@ This repository is just a [Getting Started](https://facebook.github.io/react/doc
 
 This is a **COPY** from the main [React v15.2.0](https://facebook.github.io/react/downloads.html) Source with some files made by [me](https://github.com/FMCalisto) on the [src](https://github.com/FMCalisto/react-get-started/tree/master/src/).
 
+## Where to start?
+
+You can start by watching the [Learn React.js: The Basics](https://www.lynda.com/React-js-tutorials/Learn-React-js-Basics/379264-2.html) tutorial, here [Eve Porcello](https://www.linkedin.com/in/eveporcello) will help you learn [React.js](https://facebook.github.io/react/) while guiding you through the process of building the interface for a bulletin board app.
+
+Topics include:
+
+* What is React.js?
+
+* Introducing JSX
+
+* Creating a React component
+
+* Handling events
+
+* Using state
+
+* Defining parent/child relationships
+
+* Adding child elements
+
+* Mounting and updating components
+
+* Creating a React.js app
+
+If you don't want a free tutorial or if you want a harder one you can watch [Dan Abramov's lessons](https://egghead.io/instructors/dan-abramov) to learn how to created a React hot loader, Redux and React DnD.
+
 ## Examples
 
 We have several examples [on the website](https://facebook.github.io/react/). Here is the first one to get you started:
