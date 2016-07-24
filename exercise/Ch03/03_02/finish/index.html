@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://fb.me/react-0.13.3.min.js"></script>
+        <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+        <title>React Components</title>
+    </head>
+    <body>
+    <div id="react-container"></div>
+    <script type="text/jsx">
+        var MyComponent = React.createClass({
+            render: function() {
+                return <div>My React Component</div>;
+            }
+        });
+
+        React.render( <div>
+            <MyComponent />
+                    <MyComponent />
+                    <MyComponent />
+                    </div>
+            , document.getElementById('react-container'));
+    </script>
+    </body>
+</html>
