@@ -1,4 +1,16 @@
 var Note = React.createClass({
+
+    edit: function() {
+
+        alert('editing note');
+
+    },
+
+    remove: function() {
+
+        alert('removing note');
+
+    },
     
     render: function() {
 
@@ -16,6 +28,8 @@ var Note = React.createClass({
             </div>
 
         );
+
+    }
         
 });
 
