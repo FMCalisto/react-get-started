@@ -1,21 +1,53 @@
 var Note = React.createClass({
+    
     edit: function() {
+        
         alert('editing note');
+    
     },
+
     remove: function() {
+        
         alert('removing note');
+    
     },
+
+    renderDisplay: function() {
+
+
+
+    }
+
+    renderForm: function() {
+
+        
+
+    }
+
     render: function() {
+        
         return (
-            <div className="note">
-                <p>{this.props.children}</p>
-                <span>
-                    <button onClick={this.edit}
-                            className="btn btn-primary glyphicon glyphicon-pencil"/>
-                    <button onClick={this.remove}
-                            className="btn btn-danger glyphicon glyphicon-trash"/>
-                </span>
-            </div>
+            
+                <div className="note">
+                    
+                    <p>
+
+                        {this.props.children}
+
+                    </p>
+                    
+                    <span>
+                        
+                        <button onClick={this.edit}
+                                className="btn btn-primary glyphicon glyphicon-pencil"/>
+                        
+                        <button onClick={this.remove}
+                                className="btn btn-danger glyphicon glyphicon-trash"/>
+                    
+                    </span>
+                
+                </div>
+            
             );
     }
 });
