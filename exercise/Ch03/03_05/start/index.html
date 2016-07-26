@@ -15,7 +15,7 @@
 
                 return {
 
-                    checked: false
+                    checked: true
 
                 }
 
@@ -50,7 +50,7 @@
 
                     <div>
                         
-                        <input type="checkbox" onChange={this.handleCheck}/>
+                        <input type="checkbox" onChange={this.handleCheck} defaultChecked={this.state.checked}/>
 
                         <p>
 
