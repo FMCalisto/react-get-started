@@ -8,14 +8,51 @@
     <body>
     <div id="react-container"></div>
     <script type="text/babel">
+        
         var Checkbox = React.createClass({
+
+            getInitialState: function() {
+
+                return {
+
+                    checked: false
+
+                }
+
+            },
+
+            handleCheck: function() {
+
+                this.setState({
+
+                    checked: !this.state.checked
+
+                })
+
+            },
+            
             render: function() {
-                return (<div></div>);
+                
+                return (
+
+                    <div>
+                        
+                        <input type="checkbox" onChange={this.handleCheck}/>
+
+                        <p>
+
+                        </p>
+
+                    </div>
+
+                );
+            
             }
         });
 
         React.render(<Checkbox />,
             document.getElementById('react-container'));
+
     </script>
     </body>
 </html>
