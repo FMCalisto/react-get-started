@@ -98,7 +98,7 @@ var Board = React.createClass({
         return (<div className="board">
                     {this.state.notes.map(this.eachNote)}
 
-                    <button className="btn btn-sm glyphicon glyphicon-plus" onClick={this.add} />
+                    <button className="btn btn-sm btn-success glyphicon glyphicon-plus" onClick={this.add.bind(null, "New Note")} />
 
             </div>
 
