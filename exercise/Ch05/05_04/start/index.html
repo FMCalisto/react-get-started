@@ -10,20 +10,30 @@
     var Box = React.createClass( {
         getDefaultProps: function() {
             return {
+                colorIndex: -1
+            }
+        },
+        getInitialState: function() {
+            return {
                 backgroundColor: "blue",
                 height: 200,
                 width: 200
             }
         },
+        update: function() {
+            this.setProps({colorIndex: this.props.colorIndex + 1});
+        },
+        componentWillReceiveProps: function(nextProps) {
+            var color = this.props.colors.split(',')[nextProps.colorIndex];
+            if(!color) {this.setProps({colorIndex:0})}
+            this.setState({backgroundColor: color});
+        },
         render: function() {
-            return <div>
-            <div style={this.props}></div>
-            <section style={this.props}></section>
-            </div>;
+            return <div style={this.state} onClick={this.update}></div>;
         }
     });
 
-    React.render(<Box />, document.body);
+    React.render(<Box colors="Red,DarkMagenta,Salmon,Chartreuse"/>, document.body);
 
 
 
