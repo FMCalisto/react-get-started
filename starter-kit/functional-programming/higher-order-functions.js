@@ -1,5 +1,5 @@
 // Anonymous function assigned to a variable
 
-function triple(x) {
+var triple = function(x) {
     return x * 3
 }
