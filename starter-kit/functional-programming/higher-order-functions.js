@@ -39,8 +39,6 @@ var animals = [
 // the callbak function to return a transformed object that it will
 // put into the new array instead of the original one
 
-var names = aniomals.map(function(animal){
-  return animal.name
-})
+var names = animals.map(animal => animal.name)
 
-console.log(dogs)
+console.log(names)
