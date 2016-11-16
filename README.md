@@ -88,6 +88,14 @@ And it's just as easy with [npm](http://npmjs.com):
 npm i --save react
 ```
 
+
+## References
+
+- [Is React killing Angular?](https://www.quora.com/Is-React-killing-Angular) ([Quora](https://www.quora.com/))
+- [Free Reactjs Convention Book](https://github.com/przeor/react-router-flux-starter-kit/) ([GitHub](https://github.com/))
+- [ReactJS: Mastering Best Practices for Beginners and Advanced Developers](https://reactjs.co/) ([reactjs.co](https://reactjs.co/))
+
+
 ## Contribute
 
 The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. If you're interested in helping with that, then keep reading. If you're not interested in helping right now that's ok too. :) Any feedback you have about using React would be greatly appreciated.
