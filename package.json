@@ -1,0 +1,27 @@
+{
+  "name": "react-get-started",
+  "version": "1.0.0",
+  "description": "<img src = \"./media/react.png\"/>",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FMCalisto/react-get-started.git"
+  },
+  "author": "Francisco Maria Calisto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FMCalisto/react-get-started/issues"
+  },
+  "homepage": "https://github.com/FMCalisto/react-get-started#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-latest": "^6.16.0"
+  }
+}
