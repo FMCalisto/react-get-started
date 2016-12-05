@@ -1,7 +1,7 @@
 var me = 'Francisco Calisto';
 
 /*
- *  JavaScript functionjs are clores
+ *  JavaScript functions are clores
  */
 
 function greetMe() {
