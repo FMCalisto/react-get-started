@@ -15,9 +15,11 @@ let addImg = (src) => {
 Promise.all([
     loadImage('images/image1.png'),
     loadImage('images/image2.png'),
-    loadImage('images/image3.png'),
-    loadImage('images/image4.png')
+    loadImage('images/image3.png')
 ])
-.then((images) => {
+.then((image) => {
     images.forEach(img => addImg(img.src))
+})
+.catch((error) => {
+    console.log('ERROR: ', error)
 })
