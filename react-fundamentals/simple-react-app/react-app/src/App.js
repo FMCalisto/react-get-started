@@ -1,11 +1,15 @@
 import React from 'react';
 
-// Do not have state
-// class App extends React.Component {
-//   render() {
-//     return <h1>Hello World</h1>
-//   }
-// }
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello World</h1>
+        <b>Bold</b>
+      </div>
+    )
+  }
+}
 
 // Do have state
 // class App extends React.Component {
@@ -15,6 +19,6 @@ import React from 'react';
 // }
 
 // Do not have state
-const App = () => <h1>Hello Stateless</h1>
+// const App = () => <h1>Hello Stateless</h1>
 
 export default App
