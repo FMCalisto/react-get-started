@@ -5,7 +5,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      txt: 'this is my state'
+      txt: 'this is my state',
+      cat: 0
     }
   }
 
@@ -17,21 +18,17 @@ class App extends React.Component {
     let txt = this.props.txt;
     return (
       <div>
-        <input type="text" onChange={this.update.bind(this)}/>
+        <Widget update={this.update.bind(this)} />
+        <Widget update={this.update.bind(this)} />
+        <Widget update={this.update.bind(this)} />
         <h1>{this.state.txt}</h1>
       </div>
     )
   }
 }
 
-App.proTypes = {
-  txt: React.PropTypes.string,
-  cat: React.PropTypes.number.isRequired
-}
-
-App.defaultProps = {
-  txt: "this is the default text"
-}
+const Widget = (props) =>
+  <input type="text" onChange={props.update}/>
 
 // Do have state
 // class App extends React.Component {
