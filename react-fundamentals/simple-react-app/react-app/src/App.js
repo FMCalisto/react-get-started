@@ -2,19 +2,15 @@ import React from 'react';
 
 class App extends React.Component {
   render() {
-    return <Button>I <Heart /> React</Button>
+    return <Title />
   }
 }
 
-const Button = (props) =>
-  <button>{props.children}</button>
+const Title = (props) =>
+  <h1>Title: {props.text}</h1>
 
-class Heart extends React.Component {
-  render() {
-    return <span>&hearts;</span>
-  }
+Title.propTypes = {
+  text: React.PropTypes.string.isRequired
 }
-
-
 
 export default App
