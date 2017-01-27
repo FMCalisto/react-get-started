@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 
@@ -10,31 +11,43 @@ class App extends React.Component {
 
   update () {
     this.setState({
-      a: this.a.value,
-      b: this.b.value
+      a: this.a.refs.input.value,
+      b: this.b.refs.input.value,
     })
   }
 
   render () {
     return (
       <div>
-        <input
-          ref={node => this.a = node}
-          text="text"
-          onChange={this.update.bind(this)}
+        <Input
+          ref={ component => this.a = component }
+          update={this.update.bind(this)}
         />
           {this.state.a}
         <hr />
-        <input
-          ref={node => this.b = node}
-          text="text"
-          onChange={this.update.bind(this)}
+        <Input
+          ref={ component => this.b = component }
+          update={this.update.bind(this)}
         />
           {this.state.b}
       </div>
     )
   }
 
+}
+
+class Input extends React.Component {
+  render () {
+    return (
+      <div>
+        <input
+          ref="input"
+          type="text"
+          onChange={this.props.update}
+        />
+      </div>
+    )
+  }
 }
 
 export default App
