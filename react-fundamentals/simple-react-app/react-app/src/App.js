@@ -1,53 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 
   constructor () {
     super();
-    this.state = {a: ''}
-    this.state = {b: ''}
+    this.state = {
+      val: 0
+    }
+    this.update = this.update.bind(this)
   }
 
   update () {
     this.setState({
-      a: this.a.refs.input.value,
-      b: this.b.refs.input.value,
+      val: this.state.val + 1
     })
   }
 
   render () {
+    console.log('render');
     return (
-      <div>
-        <Input
-          ref={ component => this.a = component }
-          update={this.update.bind(this)}
-        />
-          {this.state.a}
-        <hr />
-        <Input
-          ref={ component => this.b = component }
-          update={this.update.bind(this)}
-        />
-          {this.state.b}
-      </div>
+      <button
+        onClick={this.update}
+      >
+        {this.state.val}
+      </button>
     )
   }
 
-}
-
-class Input extends React.Component {
-  render () {
-    return (
-      <div>
-        <input
-          ref="input"
-          type="text"
-          onChange={this.props.update}
-        />
-      </div>
-    )
-  }
 }
 
 export default App
