@@ -13,21 +13,33 @@ class App extends React.Component {
       .then(({results: items}) => this.setState({items}))
   }
 
+  filter(event) {
+    this.setState({filter: event.target.value})
+  }
+
   render () {
-    let items = this.state.items
+    let items = this.state.items;
+    if(this.state.filter) {
+      items = items.filter( item =>
+        item.name.toLowerCase()
+        .includes(this.state.filter.toLowerCase())
+      )
+    }
     return (
       <div>
-        {items.map(item => <h4 key={item.name}>{
-          item.name
-            +
-          " is "
-            +
-          item.gender
-        }</h4>)}
+        <input
+          type="text"
+          onChange={this.filter.bind(this)}
+        />
+        {items.map(item =>
+          <Person key={item.name} person={item} />
+        )}
       </div>
     )
   }
 
 }
+
+const Person = (props) => <h4>{props.person.name}</h4>
 
 export default App
