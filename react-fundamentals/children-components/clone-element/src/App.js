@@ -2,11 +2,13 @@ import React from 'react';
 
 class App extends React.Component {
   render() {
-    <Buttons>
-      <button value="A">A</button>
-      <button value="B">B</button>
-      <button value="C">C</button>
-    </Buttons>
+    return (
+      <Buttons>
+        <button value="A">A</button>
+        <button value="B">B</button>
+        <button value="C">C</button>
+      </Buttons>
+    )
   }
 }
 
@@ -19,7 +21,11 @@ class Buttons extends React.Component {
     this.setState({selected})
   }
   render(){
-    let items = this.props.children;
+    let fn = child =>
+      React.cloneElement(child, {
+        onClick: this.selectItem.bind(this, child.props.value)
+      })
+    let items = React.Children.map(this.props.children, fn);
     return (
       <div>
         <h2>You have Selected: {this.state.selected}</h2>
